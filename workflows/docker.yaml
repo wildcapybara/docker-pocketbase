@@ -1,0 +1,12 @@
+on:
+  push:
+    branches: [ master, stage, dev ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    uses: wildcapybara/.github/.github/workflows/docker-build-push.yaml@master
